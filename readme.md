@@ -41,6 +41,8 @@ Before running the DAG, update the `.py` file with your credentials:
 
 1. Replace `AWS_ACCESS_KEY` and `AWS_SECRET_ACCESS_KEY` with your actual **AWS credentials**.
 2. Replace `OPENWEATHER_API_KEY` with your valid **OpenWeatherMap API key**.
+
+![](images/Screenshot_63.jpg)
 3. Create an S3 bucket and replace `S3_BUCKET` with its name.
 
 Example configuration in the Python script:
@@ -64,11 +66,30 @@ airflow standalone
 
 Access the Airflow UI at `http://localhost:8080`.
 
+![](images/Screenshot_62.jpg)
+
+The user and password will displayed in terminal
+![](images/Screenshot_61.jpg)
+
+
+
 ### 5. Deploy the DAG
 
-1. Place the DAG file (`weather_data_pipeline.py`) in the `dags` folder of your Airflow home directory.
+1. Place the DAG file (`weather_dag.py`) in the `dags` folder of your Airflow home directory.
 2. Refresh the Airflow UI to see the DAG.
-3. Trigger the DAG manually or schedule it to run daily.
+
+
+3. Trigger the DAG manually or schedule till u see success.
+
+![](images/Screenshot_68.jpg)
+
+4. Finally You can get the data from s3 bucket.
+
+![](images/Screenshot_67.jpg)
+
+![](images/Screenshot_66.jpg)
+
+
 
 ---
 
