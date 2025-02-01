@@ -23,6 +23,7 @@ Before you begin, ensure you have the following:
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/Abd-al-RahmanH/Automated-Global-Weather-Data-Pipeline-with-Airflow-aws-S3.git
+
 cd Automated-Global-Weather-Data-Pipeline-with-Airflow-aws-S3
 ```
 
@@ -31,7 +32,9 @@ cd Automated-Global-Weather-Data-Pipeline-with-Airflow-aws-S3
 Create a virtual environment and install dependencies:
 ```bash
 python3 -m venv venv
+
 source venv/bin/activate
+
 pip install -r requirements.txt
 ```
 
@@ -40,9 +43,11 @@ pip install -r requirements.txt
 Before running the DAG, update the `.py` file with your credentials:
 
 1. Replace `AWS_ACCESS_KEY` and `AWS_SECRET_ACCESS_KEY` with your actual **AWS credentials**.
+
 2. Replace `OPENWEATHER_API_KEY` with your valid **OpenWeatherMap API key**.
 
 ![](images/Screenshot_63.jpg)
+
 3. Create an S3 bucket and replace `S3_BUCKET` with its name.
 
 Example configuration in the Python script:
@@ -98,8 +103,9 @@ The user and password will displayed in terminal
 .
 ├── dags
 │   └── weather_data_pipeline.py  # Airflow DAG definition
-├── data
-│   └── sample_output.json         # Example output data
+├── output_file
+│   └── sample_output.csv          # Example output data
+├── images                         # Reference Images
 ├── requirements.txt               # Python dependencies
 └── README.md                      # Project documentation
 ```
